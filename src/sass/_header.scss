@@ -12,6 +12,10 @@
     height: 4.6rem;
     display: flex;
     align-items: center;
+
+    & img {
+      height: 4.6rem;
+    }
   }
 }
 
