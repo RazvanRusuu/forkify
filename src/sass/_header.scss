@@ -1,3 +1,5 @@
+@use 'base' as *;
+
 .header {
   grid-area: head;
   background-color: $color-grey-light-1;
@@ -8,8 +10,13 @@
   &__logo {
     margin-left: 4rem;
     height: 4.6rem;
-    display: block;
+    display: flex;
+    align-items: center;
   }
+}
+
+form-app {
+  padding-left: 4rem;
 }
 
 .search {

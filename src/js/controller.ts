@@ -1,6 +1,9 @@
 import icons from '../img/icons.svg';
 import '../components/HeaderComponent';
 import '../sass/main.scss';
+import '../components/Logo';
+import '../components/HeaderComponent';
+import '../components/Form';
 
 const recipeContainer = document.querySelector('.recipe');
 

@@ -9,32 +9,47 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="sass/main.scss" lang="sass" />
     <script defer type="module" src="/src/js//controller.ts"></script>
 
     <title>forkify // Search over 1,000,000 recipes</title>
   </head>
 
+  <template id="header-form">
+    <form class="search">
+      <input
+        type="text"
+        class="search__field"
+        placeholder="Search over 1,000,000 recipes..."
+      />
+      <button class="btn search__btn">
+        <svg class="search__icon">
+          <use href="img/icons.svg#icon-search"></use>
+        </svg>
+        <span>Search</span>
+      </button>
+    </form>
+  </template>
+
+  <template>
+    <li class="nav__item">
+      <button class="nav__btn nav__btn--add-recipe">
+        <svg class="nav__icon">
+          <use href="img/icons.svg#icon-edit"></use>
+        </svg>
+        <span>Add recipe</span>
+      </button>
+    </li>
+  </template>
+
+  <template id="logo">
+    <img src="./src/img/logo.png" alt="Logo" class="ml-10 h-12 block" />
+  </template>
+
   <body>
     <div class="container">
-      <header class="header grid bg-red-700">
-        <img src="img/logo.png" alt="Logo" class="header__logo" />
-        <form class="search">
-          <input
-            type="text"
-            class="search__field"
-            placeholder="Search over 1,000,000 recipes..."
-          />
-          <button class="btn search__btn">
-            <svg class="search__icon">
-              <use href="img/icons.svg#icon-search"></use>
-            </svg>
-            <span>Search</span>
-          </button>
-        </form>
-
+      <header-component class="header grid">
+        <!-- <app-logo></app-logo> -->
+        <!-- form -->
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -83,7 +98,7 @@
             </li>
           </ul>
         </nav>
-      </header>
+      </header-component>
 
       <div class="search-results">
         <ul class="results">
