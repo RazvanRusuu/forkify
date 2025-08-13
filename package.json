@@ -2,19 +2,18 @@
   "name": "starter",
   "version": "1.0.0",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.15.4",
     "@babel/core": "^7.28.0",
-    "@parcel/packager-ts": "^2.15.4",
     "autoprefixer": "^10.4.21",
-    "parcel": "^2.15.4",
     "postcss": "^8.5.6",
+    "sass": "^1.90.0",
     "tailwindcss": "^4.1.11",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vite": "^7.1.2"
   },
   "source": "./src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "vite",
+    "build": "vite build"
   },
   "author": "",
   "license": "ISC",

@@ -1,5 +1,6 @@
-import icons from 'url:../img/icons.svg';
-import '../components/Header';
+import icons from '../img/icons.svg';
+import '../components/HeaderComponent';
+import '../sass/main.scss';
 
 const recipeContainer = document.querySelector('.recipe');
 
@@ -37,7 +38,6 @@ const showRecipe = async () => {
     };
 
     renderRecipe(recipe);
-    console.log(recipe);
 
     if (!res.ok) {
       throw new Error(`${data.message} (${res.status})`);
