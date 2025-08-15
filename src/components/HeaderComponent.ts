@@ -1,9 +1,11 @@
 export class AppHeader extends HTMLElement {
   #container: HTMLElement | null;
+  #root: ShadowRoot;
   constructor() {
     super();
 
     this.#container = document.querySelector('#root');
+    this.#root = this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -11,18 +13,14 @@ export class AppHeader extends HTMLElement {
   }
 
   #render() {
-    const template = document.getElementById('header') as HTMLTemplateElement;
-    const content = template.content.cloneNode(true);
-
     this.classList.add('header', 'grid');
     const logo = document.createElement('app-logo');
-    logo.slot = 'logo';
     const form = document.createElement('form-app');
-    form.slot = 'form';
+    const nav = document.createElement('app-nav');
 
-    this.appendChild(logo);
-    this.appendChild(form);
-    this.appendChild(content);
+    this.#root.appendChild(logo);
+    this.#root.appendChild(form);
+    this.#root.appendChild(nav);
 
     // this.#container?.appendChild(this);
   }
